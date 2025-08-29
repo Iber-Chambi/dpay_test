@@ -27,6 +27,6 @@ class PluginApp(PluginConfig):
     def ready(self):
         from . import signals  # NOQA
 
-    def get_payment_providers(self, *args, **kwargs):
-        from .payment import DPayTestProvider
-        return [DPayTestProvider]
+        def get_payment_providers(self, *args, **kwargs):
+            from .payment import DPayTestProvider
+            return [DPayTestProvider]

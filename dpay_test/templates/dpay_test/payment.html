@@ -1,0 +1,10 @@
+{% extends "pretixbase/base.html" %}
+{% block content %}
+<h1>Página de Pago</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="amount">Monto:</label>
+    <input type="number" name="amount" id="amount" required>
+    <button type="submit">Pagar</button>
+</form>
+{% endblock %}

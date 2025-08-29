@@ -38,5 +38,5 @@ include-package-data = true
 version = {attr = "dpay_test.__version__"}
 
 [tool.setuptools.packages.find]
-include = ["pretix*"]
+include = ["dpay_test"]
 namespaces = false

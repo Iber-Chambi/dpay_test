@@ -1,0 +1,5 @@
+[plugin]
+package = "dpay_test"
+modules = [ "dpay_test" ]
+marketplace_name = "dpay_test"
+

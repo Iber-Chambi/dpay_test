@@ -1,0 +1,42 @@
+[project]
+name = "dpay_test"
+dynamic = ["version"]
+description = "dpay_test"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "ichambi", email = "ichambi@datec.com.bo"},
+]
+maintainers = [
+    {name = "ichambi", email = "ichambi@datec.com.bo"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+dpay_test = "dpay_test:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/Iber-Chambi/dpay_test.git"
+repository = "https://github.com/Iber-Chambi/dpay_test.git"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "dpay_test.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false
